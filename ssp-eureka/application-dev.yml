@@ -1,0 +1,37 @@
+server:
+  port: 8020
+  servlet:
+    context-path: /ssp-eureka
+
+#spring
+spring:
+  application:
+    name: ssp-eureka
+  jmx:
+    enabled: false
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin # login username
+      password: admin
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  server:
+    enable-self-preservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/ssp-eureka/eureka/
+
+logging:
+  level:
+    org:
+      springframework: WARN
+    spring:
+      springboot:
+        dao: INFO
+    com:
+      meishu: INFO
