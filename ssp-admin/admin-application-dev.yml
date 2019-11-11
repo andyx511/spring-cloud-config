@@ -127,3 +127,5 @@ logging:
         dao: INFO
     com:
       meishu: INFO
+data:
+  la: 123
