@@ -3,3 +3,5 @@ data:
   user:
     username: ndblalal
     password: 1291029102
+server:
+  port: 3302
